@@ -63,3 +63,23 @@ The dataset contains `100,000` samples and `48` columns.
 ├── model.pkl                  # Trained model (optional)
 ├── README.md                  # Project documentation
 └── requirements.txt           # Libraries and dependencies
+
+
+## 📎 Additional Information
+
+As an enhancement to the standard training workflow, an additional module named `automated_model_trainer.py` has been added to the project.
+
+This script is designed to **evaluate and compare multiple classification models** including:
+
+- ✅ XGBoost
+- ✅ Random Forest
+- ✅ Support Vector Machine (SVM)
+- ✅ Logistic Regression (optional extension)
+
+🔍 The pipeline:
+- Preprocesses the data using appropriate encoders and scalers
+- Trains each model individually
+- Evaluates them on a held-out test set using **accuracy** and **precision**
+- Automatically identifies and logs the **best-performing model** based on evaluation metrics
+
+This allows for better **model benchmarking** and ensures the most optimal model is selected for the problem at hand.
